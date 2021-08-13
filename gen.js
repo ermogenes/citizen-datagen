@@ -12,7 +12,7 @@ const run = async () => {
     console.log('Conectando...');
     await client.connect();
     await client.db('admin').command({ ping: 1 });
-    console.log('Conectado.');
+    console.log('Conectado. Alocando recursos (pode demorar)...');
     await cadastrar(client, iterations);
   } finally {
     await client.close();

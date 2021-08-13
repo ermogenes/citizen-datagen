@@ -15,25 +15,6 @@ const countries = [
   { code: 'MX', name: 'México' },
 ];
 
-const countryCodes = [
-  'US',
-  'RU',
-  'CN',
-  'IN',
-  'JP',
-  'KR',
-  'DE',
-  'FR',
-  'GB',
-  'ES',
-  'IT',
-  'MX',
-  'NL',
-  'PT',
-  'SG',
-  'ZA',
-];
-
 const maleNames = [
   'José',
   'João',

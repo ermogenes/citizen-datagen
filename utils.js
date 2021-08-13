@@ -233,7 +233,7 @@ const createVoterIdSectionOptional = (zone) =>
 
 const createSocialNameOptional = (gender) => {
   const probability = Math.random();
-  if (!gender?.includes('male')) return probability < 0.05 ? allNames.pickOne() : null;
+  if (gender?.includes('male')) return probability < 0.05 ? allNames.pickOne() : null;
   else return probability < 0.8 ? allNames.pickOne() : null;
 };
 

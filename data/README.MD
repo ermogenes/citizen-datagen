@@ -1,0 +1,1 @@
+Adaptado de https://github.com/felipefdl/cidades-estados-brasil-json

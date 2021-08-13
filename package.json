@@ -1,0 +1,24 @@
+{
+  "name": "citizen-datagen",
+  "version": "1.0.0",
+  "description": "Citizen data generator",
+  "main": "gen.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node gen.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ermogenes/citizen-datagen.git"
+  },
+  "author": "Ermogenes Palacio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ermogenes/citizen-datagen/issues"
+  },
+  "homepage": "https://github.com/ermogenes/citizen-datagen#readme",
+  "dependencies": {
+    "mongodb": "^4.1.0"
+  }
+}

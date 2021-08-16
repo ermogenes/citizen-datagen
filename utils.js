@@ -268,21 +268,27 @@ const createBirthPlaceOptional = (foreigner) => {
       countryName: country.name,
     };
   } else {
-    let probability = Math.random();
-    if (probability < 0.2) {
-      let state =
-        probability > 0.5
-          ? estados.pickOne().Sigla
-          : estados.filter((e) => e.Sigla === 'SP')[0].Sigla;
-      let city =
-        probability > 0.5
-          ? cidades.filter((c) => c.Estado == state.ID).pickOne().Nome
-          : 'São Paulo';
+    const hasCityPlaceProbability = Math.random();
+    if (hasCityPlaceProbability < 0.8) {
+      let state, cityName;
+      const fromSPCityProbability = Math.random();
+      if (fromSPCityProbability < 0.3) {
+        state = estados.filter((e) => e.Sigla === 'SP')[0];
+        cityName = 'São Paulo';
+      } else {
+        const fromSPStateProbability = Math.random();
+        state =
+          fromSPStateProbability < 0.7
+            ? estados.pickOne()
+            : estados.filter((e) => e.Sigla === 'SP')[0];
+        cityName = cidades.filter((c) => c.Estado == state.ID).pickOne().Nome;
+      }
       birthPlace = {
         countryCode: 'BR',
         countryName: 'Brasil',
-        state,
-        city,
+        stateCode: state?.Sigla || undefined,
+        stateName: state?.Nome || undefined,
+        cityName,
       };
     }
   }

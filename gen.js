@@ -20,7 +20,7 @@ const run = async () => {
     await client.db('admin').command({ ping: 1 });
     const citizens = client.db('citizenDB').collection('citizens');
 
-    console.log(`Gerando ${iterations} cidadãos...`);
+    console.log(`Gerando ${iterations} cidadão(s)...`);
     const progressBar = new cliProgress.SingleBar(
       {
         hideCursor: true,
